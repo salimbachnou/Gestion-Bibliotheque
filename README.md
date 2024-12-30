@@ -1,3 +1,50 @@
+ 
+
+```markdown
+## Installation des Dépendances
+
+Avant de commencer, assurez-vous d'avoir installé [Node.js](https://nodejs.org) et [npm](https://www.npmjs.com/). Suivez les étapes ci-dessous pour installer les dépendances nécessaires à ce projet :
+
+### 1. Installer les composants UI
+```bash
+npm install @headlessui/react @heroicons/react
+```
+
+### 2. Installer les bibliothèques de compatibilité pour le navigateur
+```bash
+npm install --save-dev stream-http https-browserify stream-browserify util assert url browserify-zlib
+```
+
+### 3. Configurer React App Rewired
+```bash
+npm install --save-dev react-app-rewired
+```
+
+### 4. Installer Chart.js et son wrapper React
+```bash
+npm install chart.js react-chartjs-2
+```
+
+### 5. Installer Axios pour les requêtes HTTP
+```bash
+npm install axios
+```
+
+### 6. Ajouter la bibliothèque de notifications
+```bash
+npm install react-toastify
+```
+
+### Vérification
+Une fois les commandes exécutées, assurez-vous que toutes les dépendances sont correctement installées en exécutant :
+```bash
+npm list
+```
+
+Vous êtes maintenant prêt à utiliser ces bibliothèques dans votre projet !
+``` 
+
+Si tu souhaites ajouter une section expliquant pourquoi chaque package est utilisé ou fournir un exemple d'utilisation, fais-le-moi savoir ! 😊
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +115,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# gestioBiblio
