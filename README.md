@@ -1,10 +1,9 @@
- 
-
 ```markdown
+```
 ## Installation des Dépendances
-
+```
 Avant de commencer, assurez-vous d'avoir installé [Node.js](https://nodejs.org) et [npm](https://www.npmjs.com/). Suivez les étapes ci-dessous pour installer les dépendances nécessaires à ce projet :
-
+```
 ### 1. Installer les composants UI
 ```bash
 npm install @headlessui/react @heroicons/react
