@@ -48,10 +48,6 @@ Une fois les commandes exécutées, assurez-vous que toutes les dépendances son
 npm list
 ```
 
-Vous êtes maintenant prêt à utiliser ces bibliothèques dans votre projet !
-
-```
-
 Si tu souhaites ajouter une section expliquant pourquoi chaque package est utilisé ou fournir un exemple d'utilisation, fais-le-moi savoir ! 😊
 # Getting Started with Create React App
 
