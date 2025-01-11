@@ -235,14 +235,6 @@ function Dashboard() {
             <p className="ml-2 text-sm text-gray-500">livres</p>
           </div>
         </div>
-
-        <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-          <h3 className="text-gray-500 text-sm font-medium">Durée moyenne d'emprunt</h3>
-          <div className="mt-2 flex items-baseline">
-            <p className="text-2xl font-semibold text-gray-800">{stats.avgDuration}</p>
-            <p className="ml-2 text-sm text-gray-500">jours</p>
-          </div>
-        </div>
       </div>
 
       {/* Top 5 des livres */}

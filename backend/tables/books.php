@@ -157,7 +157,7 @@
                 $categoryId = $getCatStmt->fetchColumn();
 
                 // Vérifier si le livre est emprunté
-                $checkSql = "SELECT COUNT(*) FROM borrowings WHERE book_id = :id AND status = 'emprunte'";
+                $checkSql = "SELECT COUNT(*) FROM reservations WHERE book_id = :id AND status = 'emprunte'";
                 $checkStmt = $conn->prepare($checkSql);
                 $checkStmt->execute([':id' => $id]);
                 $count = $checkStmt->fetchColumn();

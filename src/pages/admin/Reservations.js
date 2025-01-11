@@ -5,7 +5,8 @@ import {
   XCircleIcon, 
   ExclamationCircleIcon,
   CheckIcon,
-  XMarkIcon 
+  XMarkIcon,
+  ExclamationTriangleIcon
 } from '@heroicons/react/24/outline';
 import axios from 'axios';
 import { toast } from 'react-toastify';
@@ -14,6 +15,7 @@ function Reservations() {
   const [reservations, setReservations] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [updateLoading, setUpdateLoading] = useState(false);
 
   const fetchReservations = async () => {
     try {
@@ -114,6 +116,27 @@ function Reservations() {
         console.error('Erreur:', error);
         toast.error('Erreur lors du refus de la réservation');
       }
+    }
+  };
+
+  const handleUpdateStatus = async (reservationId, newStatus) => {
+    try {
+      setUpdateLoading(true);
+      const response = await axios.post('http://localhost/gestionBiblio/backend/update_loan_status.php', {
+        reservation_id: reservationId,
+        status: newStatus
+      });
+
+      if (response.data.status === 1) {
+        // Rafraîchir la liste des réservations
+        fetchReservations();
+      } else {
+        console.error('Erreur lors de la mise à jour:', response.data.message);
+      }
+    } catch (error) {
+      console.error('Erreur:', error);
+    } finally {
+      setUpdateLoading(false);
     }
   };
 
@@ -265,15 +288,13 @@ function Reservations() {
                           >
                             <CheckCircleIcon className="h-5 w-5" />
                           </button>
-                          {isOverdue(reservation.due_date) && (
-                            <button 
-                              onClick={() => handleStatusChange(reservation.id, 'en retard')}
-                              className="text-red-600 hover:text-red-900"
-                              title="Marquer comme en retard"
-                            >
-                              <ExclamationCircleIcon className="h-5 w-5" />
-                            </button>
-                          )}
+                          <button 
+                            onClick={() => handleStatusChange(reservation.id, 'en retard')}
+                            className="text-red-600 hover:text-red-900"
+                            title="Marquer comme en retard"
+                          >
+                            <ExclamationTriangleIcon className="h-5 w-5" />
+                          </button>
                         </>
                       )}
 
