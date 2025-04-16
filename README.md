@@ -7,6 +7,7 @@ Avant de commencer, assurez-vous d'avoir installé [Node.js](https://nodejs.org)
 ### 1. Installer les composants UI
 
 ```bash
+npm install 
 npm install @headlessui/react @heroicons/react
 ```
 
